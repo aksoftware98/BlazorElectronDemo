@@ -58,5 +58,3 @@ C:\Users\dell\Documents\AK Academy\BlazorAndElectron\Project\BlazorDesktopDemo\b
 C:\Users\dell\Documents\AK Academy\BlazorAndElectron\Project\BlazorDesktopDemo\bin\Debug\netcoreapp3.1\WebSocket4Net.dll
 C:\Users\dell\Documents\AK Academy\BlazorAndElectron\Project\BlazorDesktopDemo\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Dialog.razor.g.cs
 C:\Users\dell\Documents\AK Academy\BlazorAndElectron\Project\BlazorDesktopDemo\obj\Debug\netcoreapp3.1\Razor\Pages\Dialog.razor.g.cs
-C:\Users\dell\Documents\AK Academy\BlazorAndElectron\Project\BlazorDesktopDemo\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Notifications.razor.g.cs
-C:\Users\dell\Documents\AK Academy\BlazorAndElectron\Project\BlazorDesktopDemo\obj\Debug\netcoreapp3.1\Razor\Pages\Notifications.razor.g.cs

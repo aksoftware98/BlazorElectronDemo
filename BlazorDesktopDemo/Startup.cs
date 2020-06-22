@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using BlazorDesktopDemo.Data;
 using ElectronNET.API;
+using ElectronNET.API.Entities;
 
 namespace BlazorDesktopDemo
 {
@@ -68,6 +69,47 @@ namespace BlazorDesktopDemo
         void ElectronBootstrap()
         {
             Task.Run(async () => await Electron.WindowManager.CreateWindowAsync());
+
+            var menu = new MenuItem[]
+            {
+                new MenuItem
+                {
+                    Label = "File",
+                    Type = MenuType.submenu,
+                    Submenu = new MenuItem[]
+                    {
+                        new MenuItem
+                        {
+                            Label = "New",
+                            Click = async () =>  await Electron.Dialog.ShowMessageBoxAsync("New menu clicked"),
+                        },
+                        new MenuItem
+                        {
+                            Type = MenuType.separator,
+                        },
+                        new MenuItem
+                        {
+                            Label = "Exit",
+                            Role = MenuRole.close
+                        }
+                    }
+                },
+                new MenuItem 
+                {
+                    Label = "Edit",
+                    Submenu = new MenuItem[]
+                    {
+                        new MenuItem
+                        {
+                            Label = "Test", 
+                            Click = async () =>  await Electron.Dialog.ShowMessageBoxAsync("Test menu clicked"),
+                            Accelerator = "CmdOrCtrl+T"
+                        }
+                    }
+                }
+            };
+
+            Electron.Menu.SetApplicationMenu(menu);
         }
     }
 }
